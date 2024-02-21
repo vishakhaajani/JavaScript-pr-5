@@ -1,0 +1,19 @@
+<!-- 3. find minummum number in array. -->
+
+<script>
+
+    var arr = [14, 28, 2, 2, 28, 6];
+    var dup = [];
+    var cnt = 0;
+
+    for(let i=0; i<arr.length; i++){
+        for(let j=i+1; j<arr.length; j++){
+            if (arr[i] == arr[j] && !dup.includes(arr[i])){
+                dup[cnt] = arr[i];
+                cnt++;
+            }
+        }
+    }
+    document.write(dup);
+
+</script>
